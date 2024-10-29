@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESR Consulting</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="home.html">ESR Consulting</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Servizi</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contatti</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="container mb-5">
+    <!-- Tabella con Bootstrap -->
+    <table class="table table-striped table-bordered" id="bookTable">
+        <caption>Uncle Bob's Book Table</caption>
+        <thead class="table-dark">
+        <tr>
+            <th>Servizio</th>
+            <th>Prezzo</th>
+            <th>Responsabile</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Sviluppo Applicazioni Web</td>
+            <td><span class="badge bg-primary">€1995</span></td>
+            <td>Prentice Hall</td>
+            <td><button class="btn btn-danger btn-sm deleteButton"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+            <td>Analisi dei dati attraverso AI</td>
+            <td><span class="badge bg-primary">€2002</span></td>
+            <td>Pearson</td>
+            <td><button class="btn btn-danger btn-sm deleteButton"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+            <td>Penetration Testing</td>
+            <td><span class="badge bg-primary">€2009</span></td>
+            <td>Prentice Hall</td>
+            <td><button class="btn btn-danger btn-sm deleteButton"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+            <td>Corso di formazione: C++ 23</td>
+            <td><span class="badge bg-primary">€2017</span></td>
+            <td>Prentice Hall</td>
+            <td><button class="btn btn-danger btn-sm deleteButton"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+            <td>Corso di formazione: Tensorflow</td>
+            <td><span class="badge bg-primary">€2011</span></td>
+            <td>Prentice Hall</td>
+            <td><button class="btn btn-danger btn-sm deleteButton"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+            <td>Corso di formazione: Network Security</td>
+            <td><span class="badge bg-primary">€1000</span></td>
+            <td>Raul Chiesa</td>
+            <td><button class="btn btn-danger btn-sm deleteButton"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Funzionalità per rimuovere una riga dalla tabella
+    document.addEventListener("DOMContentLoaded", function() {
+        const deleteButtons = document.querySelectorAll(".deleteButton");
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const row = this.closest("tr");
+                row.remove();
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
